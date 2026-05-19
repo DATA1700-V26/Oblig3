@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h1>Admin</h1>
+    <a href="index.html">Tilbake</a>
+</nav>
+
+<h2>Upgrades</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Navn</th>
+        <th>Cost</th>
+        <th>XP Boost</th>
+        <th>Handling</th>
+    </tr>
+    </thead>
+    <tbody id="upgradeTable"></tbody>
+</table>
+
+<h3>Lag / Rediger</h3>
+
+<input id="name" placeholder="Navn">
+<input id="cost" type="number" placeholder="Cost">
+<input id="xpBoost" type="number" placeholder="XP Boost">
+
+<button onclick="save()">Lagre</button>
+
+<script src="admin.js"></script>
+</body>
+</html>

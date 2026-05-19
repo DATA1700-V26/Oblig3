@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin, Study Clicker</title>
+
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <script src="/js/bootstrap.js" defer></script>
+    <script src="/admin/admin.js" defer></script>
+</head>
+<body>
+
+<main class="container py-4">
+    <nav class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h2 mb-0">Admin</h1>
+        <a class="btn btn-outline-secondary" href="/">Back to game</a>
+    </nav>
+
+    <div id="message" class="alert d-none" role="alert"></div>
+
+    <section class="mb-5">
+        <h2 class="h4">Upgrades</h2>
+        <form id="upgradeForm" class="row g-3 mb-3">
+            <input type="hidden" id="upgradeId">
+            <div class="col-md-3">
+                <label class="form-label" for="upgradeName">Name</label>
+                <input class="form-control" id="upgradeName" required>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label" for="upgradeCost">Cost</label>
+                <input class="form-control" id="upgradeCost" type="number" min="0" required>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label" for="upgradeCpsMulti">CPS multiplier</label>
+                <input class="form-control" id="upgradeCpsMulti" type="number" min="0" step="0.1" required>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label" for="upgradeClickMulti">Click multiplier</label>
+                <input class="form-control" id="upgradeClickMulti" type="number" min="0" step="0.1" required>
+            </div>
+            <div class="col-md-3">
+                <label class="form-label" for="upgradeTitle">Title</label>
+                <input class="form-control" id="upgradeTitle" required>
+            </div>
+            <div class="col-12 d-flex gap-2">
+                <button class="btn btn-primary" type="submit">Save upgrade</button>
+                <button class="btn btn-outline-secondary" id="resetUpgradeForm" type="button">Clear</button>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-striped align-middle">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Cost</th>
+                    <th>CPS multiplier</th>
+                    <th>Click multiplier</th>
+                    <th>Title</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="upgradeTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="h4">Auto clickers</h2>
+        <form id="autoClickerForm" class="row g-3 mb-3">
+            <input type="hidden" id="autoClickerId">
+            <div class="col-md-3">
+                <label class="form-label" for="autoClickerName">Name</label>
+                <input class="form-control" id="autoClickerName" required>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label" for="autoClickerCost">Cost</label>
+                <input class="form-control" id="autoClickerCost" type="number" min="0" required>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label" for="autoClickerCps">CPS</label>
+                <input class="form-control" id="autoClickerCps" type="number" min="0" required>
+            </div>
+            <div class="col-md-5">
+                <label class="form-label" for="autoClickerTitle">Title</label>
+                <input class="form-control" id="autoClickerTitle" required>
+            </div>
+            <div class="col-12 d-flex gap-2">
+                <button class="btn btn-primary" type="submit">Save auto clicker</button>
+                <button class="btn btn-outline-secondary" id="resetAutoClickerForm" type="button">Clear</button>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-striped align-middle">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Cost</th>
+                    <th>CPS</th>
+                    <th>Title</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="autoClickerTable"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

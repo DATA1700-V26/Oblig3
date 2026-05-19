@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS upgrade (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    cost INT NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    cps_multi DOUBLE PRECISION NOT NULL,
+    click_multi DOUBLE PRECISION NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS auto_clicker (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    cost INT NOT NULL,
+    cps INT NOT NULL,
+    title VARCHAR(255) NOT NULL
+);

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Study Clicker</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="/js/bootstrap.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand bg-body-tertiary border-bottom">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">DATA1700 Clicker</a>
+        <div class="navbar-nav">
+            <a class="nav-link" href="/admin/index.html">Admin</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-4">
+    <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-6 wrapper">
+            <div>
+                <div class="xp text-center"><span id="xpTracker">0</span> Study XP</div>
+                <div class="xpps text-center"><span id="xppsTracker">0</span> Study XP per second</div>
+                <button id="clickBtn" class="click-btn" type="button" >
+                    <img id="clickImg" src="img/student.png" alt="Student" />
+                </button>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="upgrades">
+                <h2 class="text-center">Upgrades</h2>
+                <div id="upgradeContainer"></div>
+            </div>
+
+            <div class="autoClickers mt-4">
+                <h2 class="text-center">Auto Clickers</h2>
+                <div id="autoclickerContainer"></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
