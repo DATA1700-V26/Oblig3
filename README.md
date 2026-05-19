@@ -9,7 +9,7 @@ How to run the project:
 
 2 - press the run button which located over the main function.
 
-3- go to the run and debug .
+3- go to the run and debug . 
 
 4 launch the chrome against localhost
 Skriv melding
